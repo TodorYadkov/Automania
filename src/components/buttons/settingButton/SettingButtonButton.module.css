@@ -1,0 +1,47 @@
+.button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+    width: 110px;
+    height: 38px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1000;
+}
+
+.button img {
+    width: 18px;
+    height: 18px;
+}
+
+.button:hover {
+    background-color: var(--hover-color);
+}
+
+
+@media (max-width: 600px) {
+    .button {
+        width: 30px;
+        height: 30px;
+        z-index: 999;
+    }
+
+    .button span {
+        display: none;
+    }
+
+    .button img {
+        width: 14px;
+        height: 14px;
+    }
+}

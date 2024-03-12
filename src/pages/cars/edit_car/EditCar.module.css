@@ -1,0 +1,254 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 1820px;
+    height: 454px;
+    color: var(--text-color);
+    background: var(--primary-color);
+    box-shadow: 0px 5px 15px var(--border-color);
+    border-radius: 5px;
+    padding-bottom: 0.75em;
+}
+
+.section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 83px;
+    box-shadow: 0px 5px 15px var(--border-color);
+    border-radius: 5px;
+    padding-inline: 1em;
+}
+
+.header__title {
+    display: flex;
+    align-items: center;
+}
+
+.header__title svg {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.header__title h1 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form__button {
+    all: unset;
+    width: 120px;
+    height: 38px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form__button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.form__loader {
+    position: relative;
+    width: 120px;
+    height: 38px;
+    border: 1px solid var(--border-card-color);
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em;
+    padding-inline: 1em;
+}
+
+.form h2 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 0.15em;
+}
+
+.form__control {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form__label,
+.form__error {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    margin-left: 0.15em;
+    margin-bottom: 0.15em;
+}
+
+.form__input {
+    width: 500px;
+    height: 42px;
+    padding-inline: 0.45em;
+    font-weight: 600;
+    border: 1px solid var(--border-card-color);
+    border-radius: 5px;
+}
+
+.input__price {
+    width: 200px;
+    height: 42px;
+    padding-right: 55px;
+}
+
+.form__control__price::after {
+    content: 'BGN';
+    position: absolute;
+    top: 75%;
+    right: 10px;
+    transform: translateY(-75%);
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    padding: 0.25em;
+    border-left: 1px solid var(--text-color);
+}
+
+.form__error {
+    font-weight: 400;
+    color: var(--danger-color);
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+}
+
+.form__divider {
+    border: 1px solid var(--secondary-color);
+}
+
+.form__text__wrapper {
+    display: flex;
+    gap: 1.5em;
+}
+
+@media (max-width: 1800px) {
+    .section {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (max-width: 1400px) {
+    .form__input {
+        width: auto;
+    }
+
+    .input__price {
+        width: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .form__text__wrapper {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .section__header {
+        gap: 10em;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        width: 374px;
+        height: 785px;
+        position: relative;
+    }
+
+    .section__header {
+        height: 19px;
+        box-shadow: none;
+        border-radius: none;
+        padding: 2em 0.75em 0em 0.75em;
+    }
+
+    .header__title h1 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .form__button {
+        width: 344px;
+        height: 42px;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+    }
+
+    .form {
+        gap: 3em;
+    }
+
+    .form h2 {
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 0;
+        transform: translateY(50%);
+    }
+
+    .form__text__wrapper {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .form__control {
+        gap: 0.5em;
+    }
+
+    .form__label,
+    .form__error {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .form__error {
+        bottom: -30%;
+    }
+
+    .form__input {
+        width: 344px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .input__price {
+        width: 344px;
+        padding-right: 50px;
+    }
+
+    .form__loader {
+        width: 344px;
+        height: 42px;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+    }
+}

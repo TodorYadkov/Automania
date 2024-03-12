@@ -1,0 +1,23 @@
+.loader {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    z-index: 9999;
+}
+
+.loader__rotate {
+    width: 100%;
+    transform: translate(50%, 50%);
+    animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

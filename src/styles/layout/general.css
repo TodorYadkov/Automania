@@ -1,0 +1,4 @@
+body {
+    cursor: default;
+    background-color: var(--body-color);
+}

@@ -1,0 +1,48 @@
+.not__found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    gap: 0.25em;
+    color: var(--primary-color);
+    margin-top: 3em;
+}
+
+.not__found:before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('/public/assets/backgroundLogin.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: brightness(40%);
+}
+
+.not__found h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.not__found p {
+    font-weight: 300;
+    margin-bottom: 2em;
+    z-index: 1;
+}
+
+.not__found__btn {
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 0.5em 0.8em;
+    z-index: 1;
+}
+
+.not__found__btn:hover {
+    background-color: var(--hover-color);
+}
